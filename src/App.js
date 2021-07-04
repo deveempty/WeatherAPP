@@ -1,16 +1,17 @@
 import React, { useState } from "react";
+import WeatherIcons from "./utils/WeatherIcons";
+import "./icons.css";
 
-const API = {
-  key: "14228713c531f7a309d4c8492feb2863",
-  base: "https://api.openweathermap.org/data/2.5/",
-};
+const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+const API_BASE = "https://api.openweathermap.org/data/2.5/";
+
 function App() {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
   const search = (evt) => {
     if (evt.key === "Enter") {
-      fetch(`${API.base}weather?q=${query}&units=imperial&APPID=${API.key}`)
+      fetch(`${API_BASE}weather?q=${query}&units=imperial&APPID=${API_KEY}`)
         .then((rest) => rest.json())
         .then((result) => {
           setQuery("");
@@ -81,8 +82,10 @@ function App() {
               <div className="date">{dateBuilder(new Date())}</div>
             </div>
             <div className="weather-box">
-              <div className="temp">{Math.round(weather.main.temp)}°F</div>
+              <WeatherIcons iconCode={weather.weather[0].icon} />
               <div className="weather">{weather.weather[0].main}</div>
+              <br />
+              <div className="temp">{Math.round(weather.main.temp)}°F</div>
             </div>
           </div>
         ) : (
