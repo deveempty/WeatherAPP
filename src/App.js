@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import WeatherIcons from "./utils/WeatherIcons";
-import "./icons.css";
 
 const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
 const API_BASE = "https://api.openweathermap.org/data/2.5/";
@@ -84,6 +83,14 @@ function App() {
             <div className="weather-box">
               <WeatherIcons iconCode={weather.weather[0].icon} />
               <div className="weather">{weather.weather[0].main}</div>
+
+              <div className="weather">
+                {weather.weather[0].main.feels_like}
+              </div>
+              <ul className="weather__components">
+                <li>Feels like: {Math.round(weather.main.feels_like)}°F </li>
+                <li>Humidity: {weather.main.humidity} </li>
+              </ul>
               <br />
               <div className="temp">{Math.round(weather.main.temp)}°F</div>
             </div>
