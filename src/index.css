@@ -92,3 +92,15 @@ main {
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
+.weather__components {
+  display: inline-block;
+  list-style-type: none;
+  color: #fff;
+  font-size: 16 px;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.3);
+}
+.weather__components li {
+  font-weight: bolder;
+  display: inline-block;
+  padding: 3px 20px;
+}
