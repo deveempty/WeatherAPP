@@ -1,155 +1,68 @@
 import React from "react";
-import "../icons.css";
+/* Icons Imports */
+import Day from "./icons/day.svg";
+import Night from "./icons/night.svg";
+import Rainy from "./icons/rainy.svg";
+import CloudyDay from "./icons/cloudy-day.svg";
+import CloudyNight from "./icons/cloudy-night.svg";
+import Cloudy from "./icons/cloudy.svg";
+import DayRainy from "./icons/day-rainy.svg";
+import DaySnowy from "./icons/day-snowy.svg";
+import Snowy from "./icons/snowy.svg";
+import Thunder from "./icons/thunder.svg";
+/*  ----------------------------------------- */
+import "./WeatherIcons.css";
 
 const WeatherIcons = (props) => {
   const { iconCode } = props;
   switch (iconCode) {
     case "01d":
-      return (
-        <div class="icon sunny">
-          <div class="sun">
-            <div class="rays"></div>
-          </div>
-        </div>
-      );
+      return <img className="icons" src={Day} alt="Day Icon"></img>;
     case "01n":
-      return (
-        <div class="icon sunny">
-          <div class="sun"></div>
-        </div>
-      );
+      return <img className="icons" src={Night} alt="Night Icon"></img>;
 
     case "02d":
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={CloudyDay} alt="Cloudy Icon"></img>;
     case "02n":
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={CloudyNight} alt="Cloudy Icon"></img>;
 
     case "03d":
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={Cloudy} alt="Cloudy Icon"></img>;
     case "03n":
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={Cloudy} alt="Cloudy Icon"></img>;
 
     case "04d":
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={Cloudy} alt="Cloudy Icon"></img>;
     case "04n":
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={Cloudy} alt="Cloudy Icon"></img>;
 
     case "09d":
-      return (
-        <div class="icon rainy">
-          <div class="cloud"></div>
-          <div class="rain"></div>
-        </div>
-      );
+      return <img className="icons" src={DayRainy} alt="Rainy  Icon"></img>;
     case "09n":
-      return (
-        <div class="icon rainy">
-          <div class="cloud"></div>
-          <div class="rain"></div>
-        </div>
-      );
+      return <img className="icons" src={Rainy} alt="Rainy  Icon"></img>;
 
     case "10d":
-      return (
-        <div class="icon sun-shower">
-          <div class="cloud"></div>
-          <div class="sun">
-            <div class="rays"></div>
-          </div>
-          <div class="rain"></div>
-        </div>
-      );
+      return <img className="icons" src={Rainy} alt="Rainy  Icon"></img>;
     case "10n":
-      return (
-        <div class="icon sun-shower">
-          <div class="cloud"></div>
-          <div class="sun"></div>
-          <div class="rain"></div>
-        </div>
-      );
+      return <img className="icons" src={Rainy} alt="Rainy  Icon"></img>;
 
     case "11d":
-      return (
-        <div class="icon thunder-storm">
-          <div class="cloud"></div>
-          <div class="lightning">
-            <div class="bolt"></div>
-            <div class="bolt"></div>
-          </div>
-        </div>
-      );
+      return <img className="icons" src={Thunder} alt="Thunder  Icon"></img>;
     case "11n":
-      return (
-        <div class="icon thunder-storm">
-          <div class="cloud"></div>
-          <div class="lightning">
-            <div class="bolt"></div>
-            <div class="bolt"></div>
-          </div>
-        </div>
-      );
+      return <img className="icons" src={Thunder} alt="Thunder  Icon"></img>;
 
     case "13d":
-      return (
-        <div class="icon flurries">
-          <div class="cloud"></div>
-          <div class="snow">
-            <div class="flake"></div>
-            <div class="flake"></div>
-          </div>
-        </div>
-      );
+      return <img className="icons" src={DaySnowy} alt="Snow  Icon"></img>;
     case "13n":
-      return (
-        <div class="icon flurries">
-          <div class="cloud"></div>
-          <div class="snow">
-            <div class="flake"></div>
-            <div class="flake"></div>
-          </div>
-        </div>
-      );
+      return <img className="icons" src={Snowy} alt="Snow  Icon"></img>;
 
     case "50d":
-      return "https://img.icons8.com/dusk/64/000000/foggy-night-1.png";
+      return <img className="icons" src={Day} alt="Icon"></img>;
     case "50n":
-      return "https://img.icons8.com/dusk/64/000000/foggy-night-1.png";
+      return <img className="icons" src={Night} alt="Icon"></img>;
 
     default:
-      return (
-        <div class="icon cloudy">
-          <div class="cloud"></div>
-          <div class="cloud"></div>
-        </div>
-      );
+      return <img className="icons" src={Cloudy} alt="Icon"></img>;
   }
 };
 
