@@ -1,3 +1,3 @@
-# Starting this Weather app
+# DEPRECATED <https://github.com/deveempty/WeatherApp2>
 
-- Thanks a lot Eduardo for help me! 
+- One of my first projects :') 
